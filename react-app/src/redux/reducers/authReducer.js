@@ -31,6 +31,7 @@ export const authReducer = (state = authState, action) => {
 
 		case Types.LOGOUT:
 			localStorage.removeItem('profile');
+			localStorage.removeItem('wishlist');
 			return { ...state, authData: null, loading: false };
 
 		case Types.UPDATE_PROFILE: {
