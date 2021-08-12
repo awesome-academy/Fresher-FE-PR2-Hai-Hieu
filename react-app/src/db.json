@@ -18,6 +18,14 @@
 			"role": "admin",
 			"name": "Admin",
 			"id": 2
+		},
+		{
+			"email": "hai@gmail.com",
+			"password": "$2a$10$zOfSG1I8aEk6AL/5OMAZnu2S7vgBRmUMeqHwb7SKwJetAzpXA3DgW",
+			"firstname": "Hải",
+			"lastname": "Trương",
+			"role": "user",
+			"id": 3
 		}
 	],
 	"Category": [

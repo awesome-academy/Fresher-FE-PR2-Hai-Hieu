@@ -35,7 +35,14 @@
 	"isExist": "Sản phẩm đã được tồn tại trong danh sách yêu thích",
 	"wish": "Thêm sản phẩm vào danh sách yêu thích thành công",
 	"wish-empty": "Danh sách yêu thích của bạn hiện đang trống!",
-
+	"product": "Sản phẩm",
+	"category": "Danh mục sản phẩm",
+	"user": "Danh sách người dùng",
+	"manage-product": "Quản lý sản phẩm",
+	"add-product": "Thêm sản phẩm mới",
+	"manage-category": "Quản lý danh mục",
+	"add-category": "Thêm danh mục mới",
+	"manage-user": "Quản lý người dùng",
 	"Categories": {
 		"Title": "Danh mục sản phẩm",
 		"Top_Categories": {
