@@ -1,77 +1,73 @@
-import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
-import PaymentBreadcrumb from "../component/PaymentBreadcrumb";
-import { Radio } from "antd";
-import { connect } from "react-redux";
-import { useTranslation } from "react-i18next";
-import { getBill, updateBill } from "../../../../redux/actions";
-import "./styles.scss";
+/** @format */
+
+import React, { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import PaymentBreadcrumb from '../component/PaymentBreadcrumb';
+import { Radio } from 'antd';
+import { connect, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { getBill, updateBill } from '../../../../redux/actions';
+import './styles.scss';
 const Shipping = ({ getBill, billData, updateBill }) => {
     let history = useHistory();
     const { t } = useTranslation();
-    const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+    const user = useSelector((state) => state.auth.authData);
 
     useEffect(() => {
         getBill({ user: user.user.email, isPayment: false });
-    }, []);
+    }, [getBill, user.user.email]);
 
     const handelUpdateBill = () => {
         updateBill({
             id: billData.id,
-            method: "Standard",
+            method: 'Standard',
             shippingCost: 20000,
         });
-        history.push("/paymentConfirm");
+        history.push('/paymentConfirm');
     };
 
     return (
-        <div className="payment-page">
-            <div className="container payment__container">
-                <section className="shipping">
+        <div className='payment-page'>
+            <div className='container payment__container'>
+                <section className='shipping'>
                     <PaymentBreadcrumb />
-                    <div className="shipping__container">
-                        <div className="shipping__info shipping__content">
-                            <div className="shipping__content--item">
-                                <div className="shipping__info--inner">
-                                    <h4>{t("payments.shipping.Contact")}</h4>
+                    <div className='shipping__container'>
+                        <div className='shipping__info shipping__content'>
+                            <div className='shipping__content--item'>
+                                <div className='shipping__info--inner'>
+                                    <h4>{t('payments.shipping.Contact')}</h4>
                                     <p>{billData.email}</p>
                                 </div>
-                                <button className="button" onClick={() => history.push("/payment")}>
-                                    {t("payments.shipping.Change")}
+                                <button className='button' onClick={() => history.push('/payment')}>
+                                    {t('payments.shipping.Change')}
                                 </button>
                             </div>
-                            <div className=" shipping__content--item">
-                                <div className="shipping__info--inner">
-                                    <h4>{t("payments.shipping.Ship to")}</h4>
+                            <div className=' shipping__content--item'>
+                                <div className='shipping__info--inner'>
+                                    <h4>{t('payments.shipping.Ship to')}</h4>
                                     <p>{billData.address}</p>
                                 </div>
-                                <button className="button" onClick={() => history.push("/payment")}>
-                                    {t("payments.shipping.Change")}
+                                <button className='button' onClick={() => history.push('/payment')}>
+                                    {t('payments.shipping.Change')}
                                 </button>
                             </div>
                         </div>
 
-                        <div className="shipping__title">
-                            <h3>{t("payments.shipping.Shipping method")}</h3>
+                        <div className='shipping__title'>
+                            <h3>{t('payments.shipping.Shipping method')}</h3>
                         </div>
-                        <div className="shipping__method shipping__content  ">
-                            <div className="shipping__content--item">
-                                <Radio checked>{t("payments.shipping.Standard")}</Radio>
+                        <div className='shipping__method shipping__content'>
+                            <div className='shipping__content--item'>
+                                <Radio checked>{t('payments.shipping.Standard')}</Radio>
                                 <p>20.000 VND</p>
                             </div>
                         </div>
-                        <div className="shipping__btn">
-                            <button
-                                className="button button button-round button-transparent "
-                                onClick={() => handelUpdateBill()}
-                            >
-                                <span> {t("payments.shipping.Continue to payment")}</span>
+                        <div className='shipping__btn'>
+                            <button className='button button button-round button-transparent ' onClick={() => handelUpdateBill()}>
+                                <span> {t('payments.shipping.Continue to payment')}</span>
                             </button>
-                            <button
-                                className="button button-round button-transparent"
-                                onClick={() => history.push("/shipping")}
-                            >
-                                <span> {t("payments.shipping.Return to information")}</span>
+                            <button className='button button-round button-transparent' onClick={() => history.push('/shipping')}>
+                                <span> {t('payments.shipping.Return to information')}</span>
                             </button>
                         </div>
                     </div>

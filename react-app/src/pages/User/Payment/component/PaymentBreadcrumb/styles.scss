@@ -1,14 +1,17 @@
-@import "../../../../../assets/scss/variable";
-@import "../../../../../assets/scss/mixin";
+/** @format */
+
+@import '../../../../../assets/scss/variable';
+@import '../../../../../assets/scss/mixin';
 .payment {
-    &__breadcrumb {
-        gap: 0.7rem;
-        padding: 1rem 0 2rem;
-        span {
-            cursor: pointer;
-        }
-        &--active {
-            color: $primary-color;
-        }
-    }
+	&__breadcrumb {
+		gap: 0.7rem;
+		padding: 1rem 0 2rem;
+		@include flex-box(center, flex-start);
+		span {
+			cursor: pointer;
+		}
+		&--active {
+			color: $primary-color;
+		}
+	}
 }

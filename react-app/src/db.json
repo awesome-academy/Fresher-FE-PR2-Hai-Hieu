@@ -10,7 +10,8 @@
       "phone": "0796849035",
       "address": "District, Da Nang City",
       "birthday": "2001-10-09T17:00:00.000Z",
-      "imageUrl": "https://scontent.fdad1-3.fna.fbcdn.net/v/t1.6435-9/171555499_1572742106269507_6648054250086505409_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Ty4xLK-1BwcAX8T4xzG&_nc_ht=scontent.fdad1-3.fna&oh=4a8580eee03aeeb62383476c5d9e621d&oe=614956D8"
+      "imageUrl": "https://scontent.fdad1-3.fna.fbcdn.net/v/t1.6435-9/171555499_1572742106269507_6648054250086505409_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Ty4xLK-1BwcAX8T4xzG&_nc_ht=scontent.fdad1-3.fna&oh=4a8580eee03aeeb62383476c5d9e621d&oe=614956D8",
+      "wishlist": []
     },
     {
       "email": "admin@gmail.com",
@@ -169,17 +170,59 @@
   "products": [
     {
       "id": 1,
-      "categoryId": 1,
-      "name": "Orange Juice (5ltr) ",
+      "categoryId": 4,
+      "name": "Orange Juice (5ltr)",
       "img": [
         "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/49_590X668_crop_center.jpg?v=1595939069",
         "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/47_590X668_crop_center.jpg?v=1595939069"
       ],
       "rate": 4,
-      "newPrice": 60000,
+      "newPrice": 22222,
       "news": true,
-      "tagId": 1,
-      "description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
+      "tagId": 7,
+      "description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response.",
+      "image": {
+        "file": {
+          "uid": "rc-upload-1629888354222-2",
+          "lastModified": 1629878797547,
+          "lastModifiedDate": "2021-08-25T08:06:37.547Z",
+          "name": "Screen Shot 2021-08-25 at 15.06.35.png",
+          "size": 143566,
+          "type": "image/png",
+          "percent": 0,
+          "originFileObj": {
+            "uid": "rc-upload-1629888354222-2"
+          },
+          "error": {
+            "status": 404,
+            "method": "post",
+            "url": ""
+          },
+          "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /admin/manage-product</pre>\n</body>\n</html>\n",
+          "status": "error"
+        },
+        "fileList": [
+          {
+            "uid": "rc-upload-1629888354222-2",
+            "lastModified": 1629878797547,
+            "lastModifiedDate": "2021-08-25T08:06:37.547Z",
+            "name": "Screen Shot 2021-08-25 at 15.06.35.png",
+            "size": 143566,
+            "type": "image/png",
+            "percent": 0,
+            "originFileObj": {
+              "uid": "rc-upload-1629888354222-2"
+            },
+            "error": {
+              "status": 404,
+              "method": "post",
+              "url": ""
+            },
+            "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /admin/manage-product</pre>\n</body>\n</html>\n",
+            "status": "error"
+          }
+        ]
+      }
     },
     {
       "id": 2,
@@ -907,6 +950,57 @@
       "news": true,
       "tagId": 3,
       "description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
+    },
+    {
+      "name": "Product 1",
+      "categoryId": 1,
+      "desc": "123123",
+      "tagId": 1,
+      "newPrice": 12312,
+      "oldPrice": "",
+      "image": {
+        "file": {
+          "uid": "rc-upload-1629879028866-2",
+          "lastModified": 1629865981954,
+          "lastModifiedDate": "2021-08-25T04:33:01.954Z",
+          "name": "Screen Shot 2021-08-25 at 11.32.59.png",
+          "size": 1346,
+          "type": "image/png",
+          "percent": 0,
+          "originFileObj": {
+            "uid": "rc-upload-1629879028866-2"
+          },
+          "error": {
+            "status": 404,
+            "method": "post",
+            "url": ""
+          },
+          "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /admin/productCreateAdmin</pre>\n</body>\n</html>\n",
+          "status": "error"
+        },
+        "fileList": [
+          {
+            "uid": "rc-upload-1629879028866-2",
+            "lastModified": 1629865981954,
+            "lastModifiedDate": "2021-08-25T04:33:01.954Z",
+            "name": "Screen Shot 2021-08-25 at 11.32.59.png",
+            "size": 1346,
+            "type": "image/png",
+            "percent": 0,
+            "originFileObj": {
+              "uid": "rc-upload-1629879028866-2"
+            },
+            "error": {
+              "status": 404,
+              "method": "post",
+              "url": ""
+            },
+            "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /admin/productCreateAdmin</pre>\n</body>\n</html>\n",
+            "status": "error"
+          }
+        ]
+      },
+      "id": 51
     }
   ],
   "listComment": [
@@ -936,34 +1030,43 @@
       "datetime": "2021-08-21 21:29:39",
       "rate": 3,
       "id": 3
+    },
+    {
+      "title": "12312312",
+      "content": "123123",
+      "idProduct": "12",
+      "name": "Admin",
+      "datetime": "2021-08-24 13:50:00",
+      "rate": 5,
+      "id": 4
     }
   ],
   "payments": [
     {
-      "user": "truongthanhhai283@gmail.com",
-      "name": "Truong Thanh Hai",
+      "user": "admin@gmail.com",
+      "name": "Trương Thanh Hải",
       "country": "vi",
       "dataCart": [
         {
-          "id": 2,
+          "id": 20,
           "categoryId": 1,
-          "name": "Fresh Blueberry",
+          "name": " Fresh Grassben",
           "img": [
-            " https://cdn.shopify.com/s/files/1/0412/8151/9765/products/1_da8f6f9f-7e5f-4601-ab50-8cfde5005293_590X668_crop_center.jpg?v=1620642742",
-            " https://cdn.shopify.com/s/files/1/0412/8151/9765/products/16_026e9257-47ff-4543-ac04-597e044125ed_590X668_crop_center.jpg?v=1620642742"
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/39_590X668_crop_center.jpg?v=1620642397 ",
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/2_590X668_crop_center.jpg?v=1620642391 "
           ],
           "rate": 5,
-          "newPrice": 23000,
-          "news": true,
-          "tagId": 2,
+          "newPrice": 122000,
+          "news": false,
+          "tagId": 3,
           "description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response.",
           "quantity": 1,
-          "total": "23.000"
+          "total": "122.000"
         }
       ],
-      "userId": 3,
-      "paymentCode": "ARYA3390911",
-      "email": "truongthanhhai283@gmail.com",
+      "userId": 2,
+      "paymentCode": "ARYA2375478",
+      "email": "admin@gmail.com",
       "address": "Đà Nẵng",
       "zipCode": "550000",
       "phone": "8402455682",
@@ -974,7 +1077,7 @@
       "shippingCost": 20000,
       "payment": "Cash on Delivery (COD)",
       "billingAddress": "Same as shipping address",
-      "date": "08/24/2021"
+      "date": "08/25/2021"
     }
   ]
 }

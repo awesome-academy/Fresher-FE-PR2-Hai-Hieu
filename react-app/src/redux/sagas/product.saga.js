@@ -13,6 +13,15 @@ import {
     GET_TOTAL_PRODUCTS,
     GET_TOTAL_PRODUCTS_SUCCESS,
     GET_TOTAL_PRODUCTS_FAIL,
+    CREATE_PRODUCTS_SUCCESS,
+    CREATE_PRODUCTS_FAIL,
+    CREATE_PRODUCTS,
+    UPDATE_PRODUCTS,
+    UPDATE_PRODUCTS_FAIL,
+    UPDATE_PRODUCTS_SUCCESS,
+    DELETE_PRODUCTS,
+    DELETE_PRODUCTS_FAIL,
+    DELETE_PRODUCTS_SUCCESS,
 } from '../constants';
 
 const apiURL = 'http://localhost:4000';
@@ -112,8 +121,63 @@ function* getTotalProductSaga(action) {
         });
     }
 }
+
+function* createProductSaga(action) {
+    try {
+        const response = yield axios.post(`${apiURL}/products`, { ...action.payload });
+        const data = response.data;
+        console.log(data);
+        yield put({
+            type: CREATE_PRODUCTS_SUCCESS,
+            payload: data,
+        });
+    } catch (error) {
+        yield put({
+            type: CREATE_PRODUCTS_FAIL,
+            payload: error,
+        });
+    }
+}
+function* updateProductSaga(action) {
+    try {
+        const { id, ...other } = action.payload;
+        const response = yield axios.patch(`${apiURL}/products/${id}`, { ...other });
+        const data = response.data;
+        yield put({
+            type: UPDATE_PRODUCTS_SUCCESS,
+            payload: data,
+        });
+    } catch (error) {
+        yield put({
+            type: UPDATE_PRODUCTS_FAIL,
+            payload: error,
+        });
+    }
+}
+function* deleteProductSaga(action) {
+    try {
+        const { id } = action.payload;
+
+        const response = yield axios.delete(`${apiURL}/products/${id}`);
+
+        const data = response.data;
+        yield put({
+            type: DELETE_PRODUCTS_SUCCESS,
+            payload: data,
+        });
+    } catch (error) {
+        yield put({
+            type: DELETE_PRODUCTS_FAIL,
+            payload: error,
+        });
+    }
+}
+
 export default function* productSaga() {
     yield takeEvery(GET_PRODUCT_HOME, getProductHomeSaga);
     yield takeEvery(GET_PRODUCTS, getProductSaga);
     yield takeEvery(GET_TOTAL_PRODUCTS, getTotalProductSaga);
+    yield takeEvery(CREATE_PRODUCTS, createProductSaga);
+    yield takeEvery(UPDATE_PRODUCTS, updateProductSaga);
+    yield takeEvery(DELETE_PRODUCTS, deleteProductSaga);
 }

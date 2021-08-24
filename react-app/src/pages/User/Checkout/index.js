@@ -2,10 +2,10 @@
 
 import React from 'react';
 
-export default function ManageCategory() {
+export default function Payment() {
 	return (
 		<div>
-			<h1>Manage Category</h1>
+			<h1>Payment</h1>
 		</div>
 	);
 }

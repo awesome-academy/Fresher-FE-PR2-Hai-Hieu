@@ -1,7 +1,8 @@
-import { put, takeEvery } from "@redux-saga/core/effects";
-import axios from "axios";
-import { all } from "redux-saga/effects";
-import { useHistory } from "react-router-dom";
+/** @format */
+
+import { put, takeEvery } from '@redux-saga/core/effects';
+import axios from 'axios';
+import { all } from 'redux-saga/effects';
 
 import {
     CREATE_BILL,
@@ -13,7 +14,8 @@ import {
     UPDATE_BILL,
     UPDATE_BILL_FAIL,
     UPDATE_BILL_SUCCESS,
-} from "../constants";
+} from '../constants';
+import Types from '../constants/cart.constant';
 
 const apiURL = 'http://localhost:4000';
 
@@ -46,11 +48,12 @@ function* updateBillSaga(action) {
     try {
         const { id, type, user, cartId, ...other } = action.payload;
         let response;
-        if (type === "success") {
-            [response] = yield all([
-                axios.patch(`${apiURL}/payments/${id}`, { ...other }),
-                axios.delete(`${apiURL}/carts/${cartId}}`),
-            ]);
+        if (type === 'success') {
+            [response] = yield all([axios.patch(`${apiURL}/payments/${id}`, { ...other })]);
+
+            yield put({
+                type: Types.REMOVE_CART,
+            });
         } else
             response = axios.patch(`${apiURL}/payments/${id}`, {
                 ...other,
@@ -73,7 +76,7 @@ function* getBillSaga(action) {
         const { user, isPayment, id } = action.payload;
 
         const response = yield axios({
-            method: "GET",
+            method: 'GET',
             url: `${apiURL}/payments`,
             params: {
                 ...(user && { user }),

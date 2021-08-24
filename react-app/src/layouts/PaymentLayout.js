@@ -1,11 +1,10 @@
-/** @format */
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { Row, Col } from 'antd';
 import { toast } from 'react-toastify';
 import Footer from '../components/Footer';
 import Header from '../components/Headers';
-import InfoCart from '../components/InfoCart'
+import InfoCart from '../components/InfoCart';
 import { Container } from '@material-ui/core';
 function PaymentLayout({ component: Component, ...props }) {
 	const users = localStorage.getItem('profile');
@@ -16,14 +15,7 @@ function PaymentLayout({ component: Component, ...props }) {
 				<>
 					<Header />
 					<Container maxWidth='lg'>
-						<Row gutter={24}>
-							<Col md={14} sm={24} lg={14}>
-								<Component {...routerProps} />
-							</Col>
-							<Col md={10} sm={24} lg={10}>
-								<InfoCart />
-							</Col>
-						</Row>
+						<Component {...routerProps} />
 					</Container>
 					<Footer />
 				</>
